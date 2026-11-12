@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Computer Science</title>
+    <!-- Link to our CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="logo">CS Department</div>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#faculty">Faculty</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section with Image -->
+<header id="home" class="hero">
+    <div class="hero-text">
+        <h1>Welcome to Computer Science</h1>
+        <p>Building the next generation of innovators, coders, and researchers.</p>
+        <button onclick="scrollToSection('faculty')">Meet Our Faculty</button>
+    </div>
+    <div class="hero-image">
+        <!-- Replace this URL with your own local image like "images/campus.jpg" -->
+        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600" alt="Computer Lab">
+    </div>
+</header>
+
+<!-- About & Announcements Section -->
+<section id="about" class="container">
+    <h2>About & Latest News</h2>
+    <p>Our department offers B.Tech, M.Tech, and Ph.D. programs with state-of-the-art AI and Cloud Computing labs.</p>
+
+    <!-- Dynamic Announcement Box -->
+    <div class="notice-box">
+        <strong>📢 Notice:</strong> <span id="notice-text">Admissions open for 2026!</span>
+        <button onclick="changeNotice()">Next Notice</button>
+    </div>
+</section>
+
+<!-- Faculty Section (Cards generated dynamically by JS!) -->
+<section id="faculty" class="container">
+    <h2>Our Faculty</h2>
+
+    <!-- Search Filter -->
+    <input type="text" id="searchInput" onkeyup="filterFaculty()" placeholder="Search faculty by name or subject...">
+
+    <!-- JavaScript will insert faculty cards here -->
+    <div id="faculty-grid" class="grid"></div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="container">
+    <h2>Contact Us</h2>
+    <form id="contactForm" onsubmit="submitForm(event)">
+        <input type="text" id="studentName" placeholder="Your Name" required>
+        <input type="email" id="studentEmail" placeholder="Your Email" required>
+        <textarea id="studentMsg" rows="4" placeholder="Your Query..." required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    <p id="formResponse" class="success-msg"></p>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Department of Computer Science. All rights reserved.</p>
+</footer>
+
+<!-- Link to our JavaScript file -->
+<script src="script.js"></script>
+</body>
+</html>
